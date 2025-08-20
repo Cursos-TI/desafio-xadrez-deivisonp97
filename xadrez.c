@@ -35,14 +35,4 @@ int main(){
         printf(" para a esquerda! \n");
     }
     
-
-
-    
-    
-
-
-    
-    
-    
-    
 }
