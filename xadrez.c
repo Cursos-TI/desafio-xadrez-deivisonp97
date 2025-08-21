@@ -22,10 +22,11 @@ int main(){
 
     do
     {
-        if(bispo < 5){
+        bispo++;
+        if(bispo < 6){
             printf(" para cima e a direita! \n");
         } 
-    } while (bispo == 5);
+    } while (bispo < 6);
 
     printf("Tecle * r * PARA MOVER A RAINHA! \n");
     scanf("%s", &r);
