@@ -4,9 +4,11 @@ int main(){
     int torre = 0;
     int bispo = 0;
     int rainha = 0;
+    int cavalo;
     char t;
     char b;
     char r;
+    char c;
 
     printf("Tecle * t * PARA MOVER A TORRE! \n");
     scanf("%s", &t);
@@ -35,5 +37,27 @@ int main(){
     {
         printf(" para a esquerda! \n");
     }
+
+    printf("Tecle * c * PARA MOVER O CAVALO! \n");
+    scanf("%s", &c);
+
+    for(cavalo = 0; cavalo < 1; cavalo++)
+    {
+        for(int i = 0; i <= cavalo; i++){
+            printf("Baixo, Baixo, Esquerda!\n");
+        }
+        printf("\n");
+    }
+    
+
+
+    
+    
+
+
+    
+    
+    
     
 }
+
