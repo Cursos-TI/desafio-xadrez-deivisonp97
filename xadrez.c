@@ -1,63 +1,40 @@
 #include <stdio.h>
 
-int main(){
-    int torre = 0;
-    int bispo = 0;
-    int rainha = 0;
-    int cavalo;
-    char t;
-    char b;
-    char r;
-    char c;
-
-    printf("Tecle * t * PARA MOVER A TORRE! \n");
-    scanf("%s", &t);
-    
-    while (torre < 5)
-    {
-        printf("á direita! \n");
-        torre++;
+void movertorre(int torre){
+    if(torre > 0){
+        printf("Á DIREITA! \n");
+        movertorre(torre - 1);
     }
-
-    printf("Tecle * b * PARA MOVER O BISPO! \n");
-    scanf("%s", &b);
-
-    do
-    {
-        bispo++;
-        if(bispo < 6){
-            printf(" para cima e a direita! \n");
-        } 
-    } while (bispo < 6);
-
-    printf("Tecle * r * PARA MOVER A RAINHA! \n");
-    scanf("%s", &r);
-
-    for (rainha = 0; rainha < 8; rainha++)
-    {
-        printf(" para a esquerda! \n");
-    }
-
-    printf("Tecle * c * PARA MOVER O CAVALO! \n");
-    scanf("%s", &c);
-
-    for(cavalo = 0; cavalo < 1; cavalo++)
-    {
-        for(int i = 0; i <= cavalo; i++){
-            printf("Baixo, Baixo, Esquerda!\n");
-        }
-        printf("\n");
-    }
-    
-
-
-    
-    
-
-
-    
-    
-    
-    
 }
 
+void moverBispo(int bispo){
+    if(bispo > 0){
+        printf(" PARA CIMA E A DIREITA! \n");
+        moverBispo(bispo - 1);
+    }
+}
+
+void moverRainha(int rainha){
+    if(rainha > 0){
+        printf("PARA A ESQUERDA! \n");
+        moverRainha ( rainha - 1);
+    }
+}
+int main(){
+    printf("MOVENDO A TORRE! \n");
+    movertorre(5);
+    printf("MOVENDO O BISPO! \n");
+    moverBispo(5);
+    printf("MOVENDO A RAINHA! \n");
+    moverRainha(8);
+
+    for(int cavalo = 0; cavalo < 1; cavalo++){
+       printf("MOVENDO O CAVALO! \n");
+        for(int i = 0; i == cavalo; i++){
+            printf("BAIXO, BAIXO, ESQUERDA! \n");
+        }
+    }
+
+    
+    return 0;
+}
